@@ -1,302 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* Kaushan+Script, oregano, sail */
-        @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
-
-        html,
-        body,
-        .container {
-            height: 100%;
-            font-family: "Kaushan Script", "Sail", cursive;
-        }
-
-        .merrywrap {
-            position: absolute;
-            right: 0px;
-            left: 0px;
-            bottom: 0px;
-            top: 0px;
-            background-color: antiquewhite;
-            transition: background-color 0.5s ease;
-            z-index: 1000;
-            height: 102vh;
-        }
-
-        .giftbox {
-            position: absolute;
-            width: 300px;
-            height: 200px;
-            left: 50%;
-            margin-left: -150px;
-            top: 40%;
-            z-index: 10;
-        }
-
-        .giftbox>div {
-            background: #d44;
-            position: absolute;
-        }
-
-        .giftbox>div:after,
-        .giftbox>div:before {
-            position: absolute;
-            content: "";
-            top: 0;
-        }
-
-        .giftbox:after {
-            position: absolute;
-            color: #fff;
-            width: 100%;
-            content: "Abrelo!";
-            font-family: "Kaushan Script", "Sail", cursive;
-            left: 0;
-            bottom: 0;
-            font-size: 50px;
-            text-align: center;
-            transform: rotate(-20deg);
-            transform-origin: 0 0;
-
-        }
-
-        .giftbox .cover {
-            width: 100%;
-            top: 0;
-            left: 0;
-            height: 25%;
-            z-index: 2;
-        }
-
-        .giftbox .cover:before {
-            position: absolute;
-            height: 100%;
-            left: 50%;
-            width: 50px;
-            transform: translateX(-50%);
-            background: #fdc56d;
-        }
-
-        .giftbox .cover>div {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            left: 50%;
-            top: -50px;
-            transform: translateX(-50%);
-        }
-
-        .giftbox .cover>div:before,
-        .giftbox .cover>div:after {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            content: "";
-            box-shadow: inset 0 0 0 15px #fdc56d;
-            border-radius: 30px;
-            transform-origin: 50% 100%;
-        }
-
-        .giftbox .cover>div:before {
-            transform: translateX(-45%) skewY(40deg);
-        }
-
-        .giftbox .cover>div:after {
-            transform: translateX(45%) skewY(-40deg);
-        }
-
-        .giftbox .box {
-            right: 5%;
-            left: 5%;
-            height: 80%;
-            bottom: 0;
-        }
-
-        .giftbox .box:before {
-            width: 50px;
-            height: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #fdc56d;
-        }
-
-        .giftbox .box:after {
-            width: 100%;
-            height: 30px;
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .step-1 .giftbox {
-            animation: wobble 0.5s linear infinite forwards;
-        }
-
-        .step-1 .cover {
-            animation: wobble 0.5s linear infinite 0.1s forwards;
-        }
-
-        .step-1 .icons .row span {
-            opacity: 1;
-        }
-
-        .step-2 .giftbox:after {
-            opacity: 0;
-        }
-
-        .step-3 .giftbox,
-        .step-4 .giftbox {
-            opacity: 0;
-            z-index: 1;
-        }
-
-        .step-3 .giftbox:after,
-        .step-4 .giftbox:after {
-            opacity: 0;
-        }
-
-        .step-2 .giftbox .cover {
-            animation: flyUp 0.4s ease-in forwards;
-        }
-
-        .step-2 .giftbox .box {
-            animation: flyDown 0.2s ease-in 0.05s forwards;
-        }
-
-        @keyframes wobble {
-            25% {
-                transform: rotate(4deg);
-            }
-
-            75% {
-                transform: rotate(-2deg);
-            }
-        }
-
-        @keyframes flyUp {
-            75% {
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(-1000px) rotate(20deg);
-                opacity: 0;
-            }
-        }
-
-        @keyframes flyDown {
-            75% {
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-        }
-
-        @keyframes neon {
-            from {
-                text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
-            }
-
-            to {
-                text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px #1e84f2;
-            }
-        }
-
-    </style>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>❤️</title>
+  <style>
+    canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
-
 <body>
-        <!DOCTYPE html>
-        <html lang="en">
-            <head>
-                <meta charset="UTF-8" />
-                <title>Happy birthday</title>
-                <link rel="stylesheet" href="style.css" />
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-            </head>
-          <body>
-            <canvas id="c"></canvas>
+  <canvas id="heart"></canvas>
+  <script>
+    window.requestAnimationFrame =
+      window.__requestAnimationFrame ||
+      window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.oRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      (function () {
+        return function (callback, element) {
+          var lastTime = element.__lastTime || 0;
+          var currTime = Date.now();
+          var timeToCall = Math.max(1, 33 - (currTime - lastTime));
+          window.setTimeout(callback, timeToCall);
+          element.__lastTime = currTime + timeToCall;
+        };
+      })();
 
-        
-            <script src="script.js"></script>
-          </body>
-        </html>
-        <!-- partial -->
-          <script  src="./script.js"></script>
+    window.isDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+      (navigator.userAgent || navigator.vendor || window.opera).toLowerCase()
+    );
 
-    <canvas id="canvas"></canvas>
-    <div id="merrywrap" class="merrywrap">
-        <div class="giftbox">
-            <div class="cover">
-                <div></div>
-            </div>
-            <div class="box"></div>
-        </div>
+    var loaded = false;
 
-    </div>
-    <canvas id="c"></canvas>
-    <div id="balloon-container">
-    </div>
-  
-    <script>
+    var init = function () {
+      if (loaded) return;
+      loaded = true;
+      var mobile = window.isDevice;
+      var koef = mobile ? 0.5 : 1;
+      var canvas = document.getElementById("heart");
+      var ctx = canvas.getContext("2d");
+      var width = (canvas.width = koef * innerWidth);
+      var height = (canvas.height = koef * innerHeight);
+      var rand = Math.random;
 
-        window.onload = function () {
-            var merrywrap = document.getElementById("merrywrap");
-            var box = merrywrap.getElementsByClassName("giftbox")[0];
-            var step = 1;
-            var stepMinutes = [500, 500, 200, 200];
-            function init() {
-                box.addEventListener("click", openBox, false);
+      ctx.fillStyle = "rgba(0,0,0,1)";
+      ctx.fillRect(0, 0, width, height);
+
+      var drawText = function () {
+        ctx.font = "60px Arial"; 
+        ctx.fillStyle = "lightblue";
+        ctx.textAlign = "center";
+        ctx.fillText("", width / 2, height / 2.2 + 400); 
+      };
+
+      var heartPosition = function (rad) {
+        return [
+          Math.pow(Math.sin(rad), 3),
+          -(
+            15 * Math.cos(rad) -
+            5 * Math.cos(2 * rad) -
+            2 * Math.cos(3 * rad) -
+            Math.cos(4 * rad)
+          ),
+        ];
+      };
+
+      var scaleAndTranslate = function (pos, sx, sy, dx, dy) {
+        return [dx + pos[0] * sx, dy + pos[1] * sy];
+      };
+
+      window.addEventListener("resize", function () {
+        width = canvas.width = koef * innerWidth;
+        height = canvas.height = koef * innerHeight;
+        ctx.fillStyle = "rgba(0,0,0,1)";
+        ctx.fillRect(0, 0, width, height);
+      });
+
+      var traceCount = mobile ? 20 : 50;
+      var pointsOrigin = [];
+      var dr = mobile ? 0.3 : 0.1;
+      for (var i = 0; i < Math.PI * 2; i += dr)
+        pointsOrigin.push(scaleAndTranslate(heartPosition(i), 310, 19, 0, 0)); 
+      for (var i = 0; i < Math.PI * 2; i += dr)
+        pointsOrigin.push(scaleAndTranslate(heartPosition(i), 250, 15, 0, 0)); 
+      for (var i = 0; i < Math.PI * 2; i += dr)
+        pointsOrigin.push(scaleAndTranslate(heartPosition(i), 190, 11, 0, 0)); 
+
+      var heartPointsCount = pointsOrigin.length;
+      var targetPoints = [];
+
+      var pulse = function (kx, ky) {
+        for (var i = 0; i < pointsOrigin.length; i++) {
+          targetPoints[i] = [
+            kx * pointsOrigin[i][0] + width / 2,
+            ky * pointsOrigin[i][1] + height / 2.2,
+          ];
+        }
+      };
+
+      var e = [];
+      for (var i = 0; i < heartPointsCount; i++) {
+        var x = rand() * width;
+        var y = rand() * height;
+        e[i] = {
+          vx: 0,
+          vy: 0,
+          R: 2,
+          speed: rand() + 5,
+          q: ~~(rand() * heartPointsCount),
+          D: 2 * (i % 2) - 1,
+          force: 0.2 * rand() + 0.7,
+          f: "rgba(255, 0, 0, 0.7)",
+          trace: Array.from({ length: traceCount }, () => ({ x, y })),
+        };
+      }
+
+      var config = { traceK: 0.4, timeDelta: 0.6 };
+      var time = 0;
+
+      var loop = function () {
+        var n = -Math.cos(time);
+        pulse((1 + n) * 0.5, (1 + n) * 0.5);
+        time += (Math.sin(time) < 0 ? 9 : n > 0.8 ? 0.2 : 1) * config.timeDelta;
+
+        ctx.fillStyle = "rgba(0,0,0,.1)";
+        ctx.fillRect(0, 0, width, height);
+
+        for (var i = e.length; i--; ) {
+          var u = e[i];
+          var q = targetPoints[u.q];
+          var dx = u.trace[0].x - q[0];
+          var dy = u.trace[0].y - q[1];
+          var length = Math.sqrt(dx * dx + dy * dy);
+
+          if (length < 10) {
+            if (rand() > 0.95) {
+              u.q = ~~(rand() * heartPointsCount);
+            } else {
+              if (rand() > 0.99) u.D *= -1;
+              u.q = (u.q + u.D) % heartPointsCount;
+              if (u.q < 0) u.q += heartPointsCount;
             }
-            function stepClass(step) {
-                merrywrap.className = 'merrywrap';
-                merrywrap.className = 'merrywrap step-' + step;
-            }
-            function openBox() {
-                if (step === 1) {
-                    box.removeEventListener("click", openBox, false);
-                }
-                stepClass(step);
-                if (step === 3) {
-                }
-                if (step === 4) {
-                    reveal();
-                    return;
-                }
-                setTimeout(openBox, stepMinutes[step - 1]);
-                step++;
-            }
+          }
 
-            init();
+          u.vx += (-dx / length) * u.speed;
+          u.vy += (-dy / length) * u.speed;
+          u.trace[0].x += u.vx;
+          u.trace[0].y += u.vy;
+          u.vx *= u.force;
+          u.vy *= u.force;
 
+          for (var k = 0; k < u.trace.length - 1; k++) {
+            var T = u.trace[k];
+            var N = u.trace[k + 1];
+            N.x -= config.traceK * (N.x - T.x);
+            N.y -= config.traceK * (N.y - T.y);
+          }
+
+          ctx.fillStyle = u.f;
+          u.trace.forEach((t) => ctx.fillRect(t.x, t.y, 1, 1));
         }
 
-        function reveal() {
-            document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
+        drawText();
+        window.requestAnimationFrame(loop, canvas);
+      };
 
-            loop();
+      loop();
+    };
 
-            var w, h;
-            if (window.innerWidth >= 1000) {
-                w = 295; h = 185;
-            }
-            else {
-                w = 255; h = 155;
-            }
-
-        }
-    </script>
-
+    var s = document.readyState;
+    if (s === "complete" || s === "loaded" || s === "interactive") init();
+    else document.addEventListener("DOMContentLoaded", init);
+  </script>
 </body>
-
 </html>
